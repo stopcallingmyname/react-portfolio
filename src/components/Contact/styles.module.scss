@@ -8,12 +8,12 @@
     padding: 8rem 0;
   }
 
-  &__content {
+  & .content {
     display: flex;
     flex-direction: column;
   }
 
-  &__title {
+  & .title {
     @media (max-width: 750px) {
       text-align: center;
     }
@@ -32,7 +32,7 @@
     }
   }
 
-  &__icons {
+  & .icons {
     display: flex;
     gap: 8rem;
     flex-wrap: wrap;
@@ -46,7 +46,7 @@
     }
   }
 
-  &__icon-box {
+  & .icon-box {
     display: flex;
     align-items: center;
     gap: 1.5rem;
@@ -68,7 +68,7 @@
     }
   }
 
-  &__info {
+  & .info {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;

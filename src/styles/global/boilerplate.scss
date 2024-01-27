@@ -32,10 +32,22 @@ body {
   position: relative;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  pointer-events: none;
+}
+
 .container {
   max-width: 107rem;
   margin: 0 auto;
   padding: 0 4rem;
+
+  @media (max-width: 320px) {
+    max-width: 107rem;
+    padding: 0 4rem;
+  }
 }
 
 // scroll bar

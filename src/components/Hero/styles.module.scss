@@ -73,6 +73,10 @@
     @media (max-width: 500px) {
       font-size: 3.3rem;
     }
+
+    @media (max-width: 380px) {
+      font-size: 2.9rem;
+    }
   }
 
   p {
@@ -136,11 +140,17 @@
     }
 
     @media (max-width: 380px) {
+      top: 5.5rem;
       right: 3rem;
+      width: 3rem;
+      height: 3rem;
     }
 
     @media (max-width: 375px) {
-      right: 1.7rem;
+      top: 5.5rem;
+      right: 2.5rem;
+      width: 3rem;
+      height: 3rem;
     }
   }
 }
