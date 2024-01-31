@@ -62,7 +62,14 @@
 }
 
 .img-side {
+  display: flex;
+  align-content: center;
+  justify-content: left;
   position: relative;
+
+  @media (max-width: 1020px) {
+    justify-content: center;
+  }
 
   span {
     width: 19rem;
@@ -105,10 +112,13 @@
     }
   }
 
-  & .main-img {
+  & .main-canvas {
     width: 41rem;
     height: 35rem;
-    border-radius: 1.7rem;
+
+    canvas {
+      border-radius: 1.7rem;
+    }
 
     @media (max-width: 1020px) {
       margin-bottom: 3.5rem;
