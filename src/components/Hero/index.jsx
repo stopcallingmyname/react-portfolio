@@ -5,8 +5,12 @@ import {
   IconBrandTelegram,
 } from '@tabler/icons-react'
 import styles from './styles.module.scss'
+import { useEffect, useState } from 'react'
+import AnimatedLetters from '../AnimatedLetters'
 
 function Hero() {
+  const [letterClass, setLetterClass] = useState('text-animate')
+
   const skillsIcons = [
     {
       image: 'https://skillicons.dev/icons?i=angular,nest',
@@ -26,6 +30,12 @@ function Hero() {
     },
   ]
 
+  useEffect(() => {
+    setTimeout(() => {
+      return setLetterClass('text-animate-hover')
+    }, 4000)
+  }, [])
+
   return (
     <>
       <section id="home" className={styles.hero}>
@@ -33,13 +43,16 @@ function Hero() {
           <div className={styles.content}>
             <div className={styles['hero-main']}>
               <div className={styles['hero-text']}>
-                <h1>Front-End Angular Developer</h1>
+                <AnimatedLetters
+                  str={'Front-End Angular Developer'}
+                  letterClass={letterClass}
+                />
                 <img src={IconHand} alt="hand-icon" />
                 <p>
                   Hi, I`m Nikita Khaletsky. A passionate Front-End Angular
                   Developer based in Minsk, Belarus 📍
                 </p>
-                <span>
+                <span className={styles.socials}>
                   <a
                     aria-label="telegram"
                     target="_blank"
@@ -66,7 +79,6 @@ function Hero() {
                   </a>
                 </span>
               </div>
-
               <div className={styles['hero-img']}></div>
             </div>
             <div className={styles.skills}>

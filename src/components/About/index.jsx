@@ -1,5 +1,6 @@
 import styles from './styles.module.scss'
 import AboutImage from '../../assets/images/about_img.jpg'
+import Spline from '@splinetool/react-spline'
 
 function About() {
   return (
@@ -8,11 +9,14 @@ function About() {
         <div className={styles.container}>
           <div className={styles['about-content']}>
             <div className={styles['img-side']}>
-              <img
+              {/* <img
                 src={AboutImage}
                 alt="about"
                 className={styles['main-img']}
-              ></img>
+              ></img> */}
+              <div className={styles['main-canvas']}>
+                <Spline scene="https://prod.spline.design/vqyzc8BxrlwfpP5p/scene.splinecode" />
+              </div>
             </div>
             <div className={styles['text-side']}>
               <h3>About Me</h3>
