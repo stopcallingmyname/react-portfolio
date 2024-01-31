@@ -1,4 +1,4 @@
-import IconHand from '../../assets/images/hand.png'
+// import IconHand from '../../assets/images/hand.png'
 import {
   IconBrandLinkedin,
   IconBrandGithub,
