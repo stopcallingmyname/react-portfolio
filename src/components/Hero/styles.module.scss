@@ -87,7 +87,8 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      font-size: 4.5rem;
+      // font-size: 4.5rem;
+      font-size: 5rem;
     }
 
     @media (max-width: 500px) {
@@ -95,19 +96,19 @@
     }
 
     @media (max-width: 425px) {
-      font-size: 3.2rem;
+      font-size: 3.1rem;
     }
 
     @media (max-width: 380px) {
       font-size: 2.8rem;
     }
 
-    @media (max-width: 380px) {
-      font-size: 2.6rem;
-    }
+    // @media (max-width: 380px) {
+    //   font-size: 2.6rem;
+    // }
 
     @media (max-width: 320px) {
-      font-size: 2.1rem;
+      font-size: 2.3rem;
     }
   }
 

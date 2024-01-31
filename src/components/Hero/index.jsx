@@ -47,7 +47,7 @@ function Hero() {
                   str={'Front-End Angular Developer'}
                   letterClass={letterClass}
                 />
-                <img src={IconHand} alt="hand-icon" />
+                {/* <img src={IconHand} alt="hand-icon" /> */}
                 <p>
                   Hi, I`m Nikita Khaletsky. A passionate Front-End Angular
                   Developer based in Minsk, Belarus 📍

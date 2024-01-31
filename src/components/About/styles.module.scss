@@ -23,6 +23,7 @@
 
 .text-side {
   padding-right: 1.5rem;
+
   @media (max-width: 1020px) {
     max-width: 54rem;
     margin: 0 auto;
@@ -50,6 +51,22 @@
     line-height: 1.4;
     margin-bottom: 2rem;
     color: $black-shade;
+
+    // @media (max-width: 430px) {
+    //   font-size: 2.4rem;
+    // }
+
+    // @media (max-width: 420px) {
+    //   font-size: 2.1rem;
+    // }
+
+    @media (max-width: 370px) {
+      font-size: 2.2rem;
+    }
+
+    @media (max-width: 320px) {
+      font-size: 1.5rem;
+    }
   }
 
   p {
@@ -115,6 +132,7 @@
   & .main-canvas {
     width: 41rem;
     height: 35rem;
+    min-height: 23rem;
 
     canvas {
       border-radius: 1.7rem;
@@ -125,8 +143,12 @@
     }
 
     @media (max-width: 460px) {
-      width: 90%;
+      width: 100%;
       height: auto;
+    }
+
+    @media (max-width: 380px) {
+      min-height: 20rem;
     }
   }
 }
