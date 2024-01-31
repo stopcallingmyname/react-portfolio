@@ -35,6 +35,48 @@ function Contact() {
             <div className={styles.title}>
               <p>contact</p>
               <h3>Don`t be shy! Hit me up! 👇</h3>
+              <div className={styles['contact-form']}>
+                <form ref={refForm} onSubmit={sendEmail}>
+                  <ul>
+                    <li>
+                      <h3>Your Name</h3>
+                      <input
+                        type="text"
+                        name="user_name"
+                        placeholder="What`s your name?"
+                        required
+                      />
+                    </li>
+                    <li>
+                      <h3>Your Email</h3>
+                      <input
+                        type="email"
+                        name="user_email"
+                        placeholder="What`s your email?"
+                        required
+                      />
+                    </li>
+                    <li>
+                      <h3>Your Message</h3>
+                      <textarea
+                        name="user_message"
+                        placeholder="What do you want to say?"
+                        required
+                      ></textarea>
+                    </li>
+                    <li>
+                      {/* <input
+                            type="submit"
+                            className={styles['send-button']}
+                            value="Send"
+                          /> */}
+                      <button type="submit" className={styles['btn-61']}>
+                        <span>Send</span>
+                      </button>
+                    </li>
+                  </ul>
+                </form>
+              </div>
             </div>
             <div className={styles.icons}>
               <div className={styles['icon-box']}>
@@ -56,48 +98,6 @@ function Contact() {
                   {/* <a href="mailto:haletsky.nick@gmail.com">
                     haletsky.nick@gmail.com
                   </a> */}
-                  <div className={styles['contact-form']}>
-                    <form ref={refForm} onSubmit={sendEmail}>
-                      <ul>
-                        <li>
-                          <h3>Your Name</h3>
-                          <input
-                            type="text"
-                            name="user_name"
-                            placeholder="What`s your name?"
-                            required
-                          />
-                        </li>
-                        <li>
-                          <h3>Your Email</h3>
-                          <input
-                            type="email"
-                            name="user_email"
-                            placeholder="What`s your email?"
-                            required
-                          />
-                        </li>
-                        <li>
-                          <h3>Your Message</h3>
-                          <textarea
-                            name="user_message"
-                            placeholder="What do you want to say?"
-                            required
-                          ></textarea>
-                        </li>
-                        <li>
-                          {/* <input
-                            type="submit"
-                            className={styles['send-button']}
-                            value="Send"
-                          /> */}
-                          <button type="submit" className={styles['btn-61']}>
-                            <span>Send</span>
-                          </button>
-                        </li>
-                      </ul>
-                    </form>
-                  </div>
                 </div>
               </div>
             </div>

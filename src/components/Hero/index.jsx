@@ -1,4 +1,4 @@
-// import IconHand from '../../assets/images/hand.png'
+import IconHand from '../../assets/images/hand.png'
 import {
   IconBrandLinkedin,
   IconBrandGithub,
@@ -47,7 +47,11 @@ function Hero() {
                   str={'Front-End Angular Developer'}
                   letterClass={letterClass}
                 />
-                {/* <img src={IconHand} alt="hand-icon" /> */}
+                <img
+                  className="animate__animated animate__wobble animate__delay-3s"
+                  src={IconHand}
+                  alt="hand-icon"
+                />
                 <p>
                   Hi, I`m Nikita Khaletsky. A passionate Front-End Angular
                   Developer based in Minsk, Belarus 📍

@@ -32,7 +32,10 @@ function Navbar() {
         </h3>
         <ul>
           {navLinks.map((item) => (
-            <li key={item.name}>
+            <li
+              // className="animate__animated animate__rubberBand animate__delay-1s"
+              key={item.name}
+            >
               <a href={item.link}>{item.name}</a>
             </li>
           ))}
