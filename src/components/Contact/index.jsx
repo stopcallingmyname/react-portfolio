@@ -35,6 +35,79 @@ function Contact() {
             <div className={styles.title}>
               <p>contact</p>
               <h3>Don`t be shy! Hit me up! 👇</h3>
+
+              <div className={styles.terminal}>
+                <div className={styles['terminal-header']}>
+                  <div className={styles['terminal-header-op']}>
+                    <span
+                      className={`${styles['terminal-header-op-icon']} ${styles['terminal-header-op-icon--red']}`}
+                    ></span>
+                    <span
+                      className={`${styles['terminal-header-op-icon']} ${styles['terminal-header-op-icon--yellow']}`}
+                    ></span>
+                    <span
+                      className={`${styles['terminal-header-op-icon']} ${styles['terminal-header-op-icon--green']}`}
+                    ></span>
+                  </div>
+                  <div className={styles['terminal-header-title']}>
+                    root@mail:~/contact
+                  </div>
+                  <div className={styles['terminal-header-empty']}></div>
+                </div>
+                <div className={styles['terminal-body']}>
+                  <form ref={refForm} onSubmit={sendEmail}>
+                    <span className={styles['terminal-body-row']}>
+                      <span
+                        className={styles['terminal-body-row--arrow']}
+                      ></span>
+                      <span className={styles['terminal-body-row-result']}>
+                        name:
+                      </span>
+                      <input
+                        className={styles['terminal-body-row--input']}
+                        required
+                        // autoFocus
+                        type="text"
+                        name="user_name"
+                      />
+                    </span>
+                    <span className={styles['terminal-body-row']}>
+                      <span
+                        className={styles['terminal-body-row--arrow']}
+                      ></span>
+                      <span className={styles['terminal-body-row-result']}>
+                        email:
+                      </span>
+                      <input
+                        className={styles['terminal-body-row--input']}
+                        required
+                        type="email"
+                        name="user_email"
+                      />
+                    </span>
+                    <span
+                      className={styles['terminal-body-row']}
+                      // style={{ alignItems: 'flex-start' }}
+                    >
+                      <span
+                        className={styles['terminal-body-row--arrow']}
+                      ></span>
+                      <span className={styles['terminal-body-row-result']}>
+                        message:
+                      </span>
+                    </span>
+                    <span className={styles['terminal-body-row']}>
+                      <textarea
+                        className={styles['terminal-body-row--input']}
+                        required
+                        type="text"
+                        name="user_message"
+                      />
+                    </span>
+                  </form>
+                </div>
+              </div>
+
               <div className={styles['contact-form']}>
                 <form ref={refForm} onSubmit={sendEmail}>
                   <ul>
@@ -65,11 +138,6 @@ function Contact() {
                       ></textarea>
                     </li>
                     <li>
-                      {/* <input
-                            type="submit"
-                            className={styles['send-button']}
-                            value="Send"
-                          /> */}
                       <button type="submit" className={styles['btn-61']}>
                         <span>Send</span>
                       </button>
@@ -95,9 +163,9 @@ function Contact() {
                 </span>
                 <div className={styles.info}>
                   <h3>Mail</h3>
-                  {/* <a href="mailto:haletsky.nick@gmail.com">
+                  <a href="mailto:haletsky.nick@gmail.com">
                     haletsky.nick@gmail.com
-                  </a> */}
+                  </a>
                 </div>
               </div>
             </div>
