@@ -208,7 +208,7 @@ const Terminal = forwardRef(function Terminal({ onSubmit }, ref) {
                 className={styles['terminal-body-row--input']}
                 required
                 // autoFocus
-                autoComplete="no"
+                autoComplete="off"
                 type="text"
                 name="user_name"
               />
@@ -233,7 +233,7 @@ const Terminal = forwardRef(function Terminal({ onSubmit }, ref) {
                     required
                     type="email"
                     name="user_email"
-                    autoComplete="no"
+                    autoComplete="off"
                   />
                 </span>
               </>
@@ -262,7 +262,7 @@ const Terminal = forwardRef(function Terminal({ onSubmit }, ref) {
                     required
                     type="text"
                     name="user_message"
-                    autoComplete="no"
+                    autoComplete="off"
                   />
                 </span>
               </>
