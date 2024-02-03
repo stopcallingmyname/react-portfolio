@@ -2,6 +2,7 @@ import { IconMapSearch, IconMail } from '@tabler/icons-react'
 import styles from './styles.module.scss'
 import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
+import Terminal from '../Terminal'
 
 function Contact() {
   const refForm = useRef()
@@ -36,115 +37,45 @@ function Contact() {
               <p>contact</p>
               <h3>Don`t be shy! Hit me up! 👇</h3>
 
-              <div className={styles.terminal}>
-                <div className={styles['terminal-header']}>
-                  <div className={styles['terminal-header-op']}>
-                    <span
-                      className={`${styles['terminal-header-op-icon']} ${styles['terminal-header-op-icon--red']}`}
-                    ></span>
-                    <span
-                      className={`${styles['terminal-header-op-icon']} ${styles['terminal-header-op-icon--yellow']}`}
-                    ></span>
-                    <span
-                      className={`${styles['terminal-header-op-icon']} ${styles['terminal-header-op-icon--green']}`}
-                    ></span>
-                  </div>
-                  <div className={styles['terminal-header-title']}>
-                    root@mail:~/contact
-                  </div>
-                  <div className={styles['terminal-header-empty']}></div>
-                </div>
-                <div className={styles['terminal-body']}>
-                  <form ref={refForm} onSubmit={sendEmail}>
-                    <span className={styles['terminal-body-row']}>
-                      <span
-                        className={styles['terminal-body-row--arrow']}
-                      ></span>
-                      <span className={styles['terminal-body-row-result']}>
-                        name:
-                      </span>
-                      <input
-                        className={styles['terminal-body-row--input']}
-                        required
-                        // autoFocus
-                        type="text"
-                        name="user_name"
-                      />
-                    </span>
-                    <span className={styles['terminal-body-row']}>
-                      <span
-                        className={styles['terminal-body-row--arrow']}
-                      ></span>
-                      <span className={styles['terminal-body-row-result']}>
-                        email:
-                      </span>
-                      <input
-                        className={styles['terminal-body-row--input']}
-                        required
-                        type="email"
-                        name="user_email"
-                      />
-                    </span>
-                    <span
-                      className={styles['terminal-body-row']}
-                      // style={{ alignItems: 'flex-start' }}
-                    >
-                      <span
-                        className={styles['terminal-body-row--arrow']}
-                      ></span>
-                      <span className={styles['terminal-body-row-result']}>
-                        message:
-                      </span>
-                    </span>
-                    <span className={styles['terminal-body-row']}>
-                      <textarea
-                        className={styles['terminal-body-row--input']}
-                        required
-                        type="text"
-                        name="user_message"
-                      />
-                    </span>
-                  </form>
-                </div>
-              </div>
+              <Terminal ref={refForm} onSubmit={sendEmail} />
 
-              <div className={styles['contact-form']}>
-                <form ref={refForm} onSubmit={sendEmail}>
-                  <ul>
-                    <li>
-                      <h3>Your Name</h3>
-                      <input
-                        type="text"
-                        name="user_name"
-                        placeholder="What`s your name?"
-                        required
-                      />
-                    </li>
-                    <li>
-                      <h3>Your Email</h3>
-                      <input
-                        type="email"
-                        name="user_email"
-                        placeholder="What`s your email?"
-                        required
-                      />
-                    </li>
-                    <li>
-                      <h3>Your Message</h3>
-                      <textarea
-                        name="user_message"
-                        placeholder="What do you want to say?"
-                        required
-                      ></textarea>
-                    </li>
-                    <li>
-                      <button type="submit" className={styles['btn-61']}>
-                        <span>Send</span>
-                      </button>
-                    </li>
-                  </ul>
-                </form>
-              </div>
+              {/* <div className={styles['contact-form']}>
+                  <form ref={refForm} onSubmit={sendEmail}>
+                    <ul>
+                      <li>
+                        <h3>Your Name</h3>
+                        <input
+                          type="text"
+                          name="user_name"
+                          placeholder="What`s your name?"
+                          required
+                        />
+                      </li>
+                      <li>
+                        <h3>Your Email</h3>
+                        <input
+                          type="email"
+                          name="user_email"
+                          placeholder="What`s your email?"
+                          required
+                        />
+                      </li>
+                      <li>
+                        <h3>Your Message</h3>
+                        <textarea
+                          name="user_message"
+                          placeholder="What do you want to say?"
+                          required
+                        ></textarea>
+                      </li>
+                      <li>
+                        <button type="submit" className={styles['btn-61']}>
+                          <span>Send</span>
+                        </button>
+                      </li>
+                    </ul>
+                  </form>
+                </div> */}
             </div>
             <div className={styles.icons}>
               <div className={styles['icon-box']}>
