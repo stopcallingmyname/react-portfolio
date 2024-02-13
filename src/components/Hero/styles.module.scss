@@ -1,4 +1,4 @@
-@use '../../../src/styles/global/boilerplate.scss' as *;
+@use "../../../src/global/boilerplate.scss" as *;
 
 .hero {
   display: flex;
@@ -228,7 +228,7 @@
 }
 
 .hero-img {
-  background-image: url('../../assets/images/photo_2023.webp');
+  background-image: url("../../assets/images/photo_2023.webp");
   width: 35rem;
   height: 35rem;
   background-size: cover;

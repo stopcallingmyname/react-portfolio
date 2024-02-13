@@ -1,14 +1,20 @@
+import React from 'react'
 import './styles.scss'
 
-const AnimatedLetters = ({ str, letterClass }) => {
+interface AnimatedLettersProps {
+  str: string;
+  LetterClass: string;
+}
+
+const AnimatedLetters: React.FC<AnimatedLettersProps> = ({ str, LetterClass }) => {
   const characters = Array.from(str)
 
   return (
     <h1>
-      {characters.map((char, i) => (
+      {characters.map((char: string, i : number) => (
         <span
           key={char + i}
-          className={`${letterClass} _${i}`}
+          className={`${LetterClass} _${i}`}
           style={{
             marginRight: char === ' ' ? '0.5rem' : 0,
           }}

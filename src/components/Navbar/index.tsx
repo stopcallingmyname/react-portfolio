@@ -1,3 +1,4 @@
+import React from 'react'
 import { useState } from 'react'
 import { IconMenu2, IconX } from '@tabler/icons-react'
 import styles from './styles.module.scss'

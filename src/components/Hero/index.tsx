@@ -1,3 +1,4 @@
+import React from 'react'
 import IconHand from '../../assets/images/hand.png'
 import {
   IconBrandLinkedin,
@@ -9,7 +10,7 @@ import { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
 
 function Hero() {
-  const [letterClass, setLetterClass] = useState('text-animate')
+  const [letterClass, setLetterClass] = useState<string>('text-animate')
 
   const skillsIcons = [
     {
@@ -45,7 +46,7 @@ function Hero() {
               <div className={styles['hero-text']}>
                 <AnimatedLetters
                   str={'Front-End Angular Developer'}
-                  letterClass={letterClass}
+                  LetterClass={letterClass}
                 />
                 <img
                   className="animate__animated animate__wobble animate__delay-3s"

@@ -1,3 +1,4 @@
+import React from 'react';
 import { IconMapSearch, IconMail } from '@tabler/icons-react'
 import styles from './styles.module.scss'
 import { useRef } from 'react'
@@ -5,13 +6,13 @@ import emailjs from '@emailjs/browser'
 import Terminal from '../Terminal'
 
 function Contact() {
-  const refForm = useRef()
+  const refForm = useRef<HTMLFormElement>(null);
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
-    emailjs
-      .sendForm(
+    if (refForm.current) {
+      emailjs.sendForm(
         'service_v666rfp4f',
         'template_loje2qn',
         refForm.current,
@@ -20,12 +21,13 @@ function Contact() {
       .then(
         () => {
           alert('Message successfully sent!')
-          window.location.reload(false)
+          window.location.reload();
         },
         () => {
           alert('Failed to send the message')
         }
       )
+    }
   }
 
   return (
@@ -39,43 +41,7 @@ function Contact() {
 
               <Terminal ref={refForm} onSubmit={sendEmail} />
 
-              {/* <div className={styles['contact-form']}>
-                  <form ref={refForm} onSubmit={sendEmail}>
-                    <ul>
-                      <li>
-                        <h3>Your Name</h3>
-                        <input
-                          type="text"
-                          name="user_name"
-                          placeholder="What`s your name?"
-                          required
-                        />
-                      </li>
-                      <li>
-                        <h3>Your Email</h3>
-                        <input
-                          type="email"
-                          name="user_email"
-                          placeholder="What`s your email?"
-                          required
-                        />
-                      </li>
-                      <li>
-                        <h3>Your Message</h3>
-                        <textarea
-                          name="user_message"
-                          placeholder="What do you want to say?"
-                          required
-                        ></textarea>
-                      </li>
-                      <li>
-                        <button type="submit" className={styles['btn-61']}>
-                          <span>Send</span>
-                        </button>
-                      </li>
-                    </ul>
-                  </form>
-                </div> */}
+              
             </div>
             <div className={styles.icons}>
               <div className={styles['icon-box']}>
@@ -104,7 +70,7 @@ function Contact() {
         </div>
       </section>
     </>
-  )
+  );
 }
 
-export default Contact
+export default Contact;
