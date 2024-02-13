@@ -1,4 +1,3 @@
-// import React from 'react'
 import styles from './styles.module.scss'
 // import AboutImage from '../../assets/images/about_img.jpg'
 import Spline from '@splinetool/react-spline'

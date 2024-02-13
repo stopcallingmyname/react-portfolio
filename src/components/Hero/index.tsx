@@ -1,4 +1,3 @@
-import React from 'react'
 import IconHand from '../../assets/images/hand.png'
 import {
   IconBrandLinkedin,
