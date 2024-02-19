@@ -1,5 +1,30 @@
 @use '../../../src/global/boilerplate.scss' as *;
 
+// .wrapper {
+//   background-color: $background-color;
+//   // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+//   border-radius: 1.7rem;
+//   height: 100%;
+//   width: 100%;
+//   border: 2px solid $black-shade;
+//   display: flex;
+//   align-items: flex-end;
+// }
+
+// .links {
+//   display: flex;
+//   flex-direction: column;
+
+//   & p,
+//   a {
+//     font-weight: 400;
+//     font-size: $text-size;
+//     font-family: $text-font;
+//     text-decoration: none;
+//     color: $black-shade;
+//   }
+// }
+
 .wrapper {
   background-color: $background-color;
   // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -7,8 +32,17 @@
   height: 100%;
   width: 100%;
   border: 2px solid $black-shade;
+  padding: 0.5rem;
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.preview {
+    
 }
 
 .links {
@@ -19,7 +53,7 @@
   a {
     font-weight: 400;
     font-size: $text-size;
-    font-family: $title-font;
+    font-family: $text-font;
     text-decoration: none;
     color: $black-shade;
   }

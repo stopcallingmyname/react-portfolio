@@ -15,7 +15,7 @@ function Projects() {
             <p>Portfolio</p>
             <h3>
               Each project is a unique piece of development{' '}
-              <IconPuzzleFilled style={{rotate: '16deg'}} />
+              <IconPuzzleFilled style={{rotate: '16deg', color: '#00e698'}} />
             </h3>
           </div>
 
