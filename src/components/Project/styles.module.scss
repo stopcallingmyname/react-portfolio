@@ -31,7 +31,7 @@
   border-radius: 1.7rem;
   height: 100%;
   width: 100%;
-  border: 2px solid $black-shade;
+  // border: 2px solid $black-shade;
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -42,7 +42,33 @@
 }
 
 .preview {
-    
+  display: flex;
+  height: 7.8125rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+  align-self: stretch;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: 1.1rem;
+}
+
+.title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+  align-self: stretch;
+
+  & p {
+    color: #000;
+    font-size: $text-size;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 0.975rem */
+    font-family: $text-font;
+  }
 }
 
 .links {
