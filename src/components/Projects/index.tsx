@@ -1,5 +1,6 @@
-import styles from "./styles.module.scss";
-import {IconPuzzleFilled} from "@tabler/icons-react";
+import Project from '../Project';
+import styles from './styles.module.scss';
+import {IconPuzzleFilled} from '@tabler/icons-react';
 
 function Projects() {
   return (
@@ -10,23 +11,29 @@ function Projects() {
         </div> */}
 
         <div className={styles.container}>
-          <div className={styles["projects-content"]}>
+          <div className={styles['projects-content']}>
             <p>Portfolio</p>
             <h3>
-              Each project is a unique piece of development{" "}
-              <IconPuzzleFilled style={{rotate: "16deg"}} />
+              Each project is a unique piece of development{' '}
+              <IconPuzzleFilled style={{rotate: '16deg'}} />
             </h3>
           </div>
 
-          <div className={styles["bento-wrapper"]}>
-            <div className={styles["bento-top"]}>
-              <div className={styles["tab-1"]}>1</div>
-              <div className={styles["tab-2"]}>2</div>
-              <div className={styles["tab-3"]}>3</div>
+          <div className={styles['bento-wrapper']}>
+            <div className={styles['bento-top']}>
+              <div style={{gridArea: '1 / 1 / 3 / 2'}}>
+                <Project />
+              </div>
+
+              <Project />
+              <Project />
             </div>
-            <div className={styles["bento-bottom"]}>
-              <div className={styles["tab-1"]}>1</div>
-              <div className={styles["tab-2"]}>2</div>
+            <div className={styles['bento-bottom']}>
+              <Project
+                gitUrl="https://github.com/stopcallingmyname/Modsen-Weather-Task"
+                publicUrl="https://www.w3schools.com/html/html_links.asp"
+              />
+              <Project />
             </div>
           </div>
         </div>

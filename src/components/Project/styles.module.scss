@@ -1,0 +1,26 @@
+@use '../../../src/global/boilerplate.scss' as *;
+
+.wrapper {
+  background-color: $background-color;
+  // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 1.7rem;
+  height: 100%;
+  width: 100%;
+  border: 2px solid $black-shade;
+  display: flex;
+  align-items: flex-end;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+
+  & p,
+  a {
+    font-weight: 400;
+    font-size: $text-size;
+    font-family: $title-font;
+    text-decoration: none;
+    color: $black-shade;
+  }
+}
