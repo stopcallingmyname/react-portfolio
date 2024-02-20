@@ -1,4 +1,4 @@
-@use "../../../src/global/boilerplate.scss" as *;
+@use '../../../src/global/boilerplate.scss' as *;
 
 .mobile-menu {
   font-size: 2.3rem;
@@ -43,6 +43,7 @@
     top: 2rem;
     right: 4rem;
     cursor: pointer;
+    animation-duration: both;
 
     &:hover {
       color: $header-color;

@@ -22,19 +22,37 @@ function Projects() {
           <div className={styles['bento-wrapper']}>
             <div className={styles['bento-top']}>
               <div style={{gridArea: '1 / 1 / 3 / 2'}}>
-                <Project />
+                <Project
+                  img="https://cdn.dribbble.com/users/2547736/screenshots/16309212/media/dfc6571df7ce9adadc6b4d2987558e53.png"
+                  title="NULLABLE"
+                  gitUrl="https://github.com/stopcallingmyname/Modsen-Weather-Task"
+                  publicUrl="https://www.w3schools.com/html/html_links.asp"
+                  // style={{rotate: '-4deg'}}
+                />
               </div>
-
-              <Project />
-              <Project />
-            </div>
-            <div className={styles['bento-bottom']}>
               <Project
+                img="https://cdn.dribbble.com/users/2547736/screenshots/16309212/media/dfc6571df7ce9adadc6b4d2987558e53.png"
+                title="Weather App"
+                gitUrl="https://github.com/stopcallingmyname/Modsen-Weather-Task"
+                publicUrl="https://www.w3schools.com/html/html_links.asp"
+                style={{rotate: '-4deg', marginLeft: '1.5rem'}}
+              />
+              <Project
+                img="https://cdn.dribbble.com/users/2547736/screenshots/16309212/media/dfc6571df7ce9adadc6b4d2987558e53.png"
+                title="Later.."
+                gitUrl="https://github.com/stopcallingmyname/Modsen-Weather-Task"
+                publicUrl="https://www.w3schools.com/html/html_links.asp"
+                style={{rotate: '4deg', margin: '1.5rem'}}
+              />
+            </div>
+            {/* <div className={styles['bento-bottom']}>
+              <Project
+                img="https://cdn.dribbble.com/users/2547736/screenshots/16309212/media/dfc6571df7ce9adadc6b4d2987558e53.png"
                 gitUrl="https://github.com/stopcallingmyname/Modsen-Weather-Task"
                 publicUrl="https://www.w3schools.com/html/html_links.asp"
               />
               <Project />
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
