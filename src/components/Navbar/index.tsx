@@ -1,24 +1,24 @@
-import { useState } from 'react'
-import { IconMenu2, IconX } from '@tabler/icons-react'
-import styles from './styles.module.scss'
+import {useState} from 'react';
+import {IconMenu2, IconX} from '@tabler/icons-react';
+import styles from './styles.module.scss';
 
 function Navbar() {
-  const [hamburger, setHamburger] = useState(false)
+  const [hamburger, setHamburger] = useState(false);
 
   const hamburgerMenu = () => {
-    setHamburger(!hamburger)
-  }
+    setHamburger(!hamburger);
+  };
 
   const pageUp = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  };
 
   const navLinks = [
-    { name: 'Home', link: '#home' },
-    { name: 'About', link: '#about' },
-    { name: 'Projects', link: '#projects' },
-    { name: 'Contact', link: '#contact' },
-  ]
+    {name: 'Home', link: '#home'},
+    {name: 'About', link: '#about'},
+    {name: 'Projects', link: '#projects'},
+    {name: 'Contact', link: '#contact'},
+  ];
 
   return (
     <>
@@ -28,10 +28,7 @@ function Navbar() {
         </h3>
         <ul>
           {navLinks.map((item) => (
-            <li
-             
-              key={item.name}
-            >
+            <li key={item.name}>
               <a href={item.link}>{item.name}</a>
             </li>
           ))}
@@ -63,7 +60,7 @@ function Navbar() {
         </ul>
       </div>
     </>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

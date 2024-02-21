@@ -43,48 +43,25 @@ h4 {
   max-width: 107rem;
   margin: 0 auto;
   padding: 0 4rem;
-
-  @media (max-width: 320px) {
-    max-width: 107rem;
-    padding: 0 4rem;
-  }
 }
 
 // scroll bar
 
-/* Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: #8e8e8e #ffffff;
-}
+::-webkit-scrollbar {
+  width: 0;
+  height: 10px;
 
-/* Chrome, Edge and Safari */
-*::-webkit-scrollbar {
-  width: 8px;
-  width: 8px;
-}
-*::-webkit-scrollbar-track {
-  border-radius: 20px;
-  background-color: #ffffff;
-}
+  &-track {
+    background: $background-color;
+  }
 
-*::-webkit-scrollbar-track:hover {
-  background-color: #ffffff;
-}
+  &-thumb {
+    background: $black-shade;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
 
-*::-webkit-scrollbar-track:active {
-  background-color: #ffffff;
-}
-
-*::-webkit-scrollbar-thumb {
-  border-radius: 20px;
-  background-color: #8e8e8e;
-}
-
-*::-webkit-scrollbar-thumb:hover {
-  background-color: #878787;
-}
-
-*::-webkit-scrollbar-thumb:active {
-  background-color: #8e8e8e;
+    &:hover {
+      background: $black-shade;
+    }
+  }
 }

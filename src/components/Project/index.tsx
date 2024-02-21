@@ -7,6 +7,7 @@ import {
   // IconBrandNextjs,
   // IconBrandCss3,
 } from '@tabler/icons-react';
+import {motion} from 'framer-motion';
 
 type ProjectProps = {
   img?: string;
@@ -19,7 +20,15 @@ type ProjectProps = {
 function Project({img, title, gitUrl, publicUrl, style}: ProjectProps) {
   return (
     <>
-      <section className={styles['wrapper']} style={style}>
+      <motion.section
+        className={styles['wrapper']}
+        style={style}
+        initial={{scale: 0}}
+        whileInView={{scale: 1}}
+        transition={{duration: 0.2, type: 'spring'}}
+        whileHover={{scale: 1.05}}
+        viewport={{once: true}}
+      >
         <img src={img} className={styles.preview}></img>
         <div className={styles['title-wrapper']}>
           <p>{title}</p>
@@ -66,7 +75,7 @@ function Project({img, title, gitUrl, publicUrl, style}: ProjectProps) {
             <p>SCSS</p>
           </div>
         </div> */}
-      </section>
+      </motion.section>
     </>
   );
 }

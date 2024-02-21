@@ -1,6 +1,5 @@
-import styles from './styles.module.scss'
-// import AboutImage from '../../assets/images/about_img.jpg'
-import Spline from '@splinetool/react-spline'
+import styles from './styles.module.scss';
+import Spline from '@splinetool/react-spline';
 
 function About() {
   return (
@@ -9,11 +8,6 @@ function About() {
         <div className={styles.container}>
           <div className={styles['about-content']}>
             <div className={styles['img-side']}>
-              {/* <img
-                src={AboutImage}
-                alt="about"
-                className={styles['main-img']}
-              ></img> */}
               <div className={styles['main-canvas']}>
                 <Spline scene="https://prod.spline.design/vqyzc8BxrlwfpP5p/scene.splinecode" />
               </div>
@@ -36,7 +30,7 @@ function About() {
         </div>
       </section>
     </>
-  )
+  );
 }
 
-export default About
+export default About;

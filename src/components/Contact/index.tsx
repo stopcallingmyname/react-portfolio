@@ -1,34 +1,36 @@
 import React from 'react';
-import { IconMapSearch, IconMail } from '@tabler/icons-react'
-import styles from './styles.module.scss'
-import { useRef } from 'react'
-import emailjs from '@emailjs/browser'
-import Terminal from '../Terminal'
+import {IconMapSearch, IconMail} from '@tabler/icons-react';
+import styles from './styles.module.scss';
+import {useRef} from 'react';
+import emailjs from '@emailjs/browser';
+import Terminal from '../Terminal';
+import {motion} from 'framer-motion';
 
 function Contact() {
   const refForm = useRef<HTMLFormElement>(null);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+    e.preventDefault();
 
     if (refForm.current) {
-      emailjs.sendForm(
-        'service_v666rfp4f',
-        'template_loje2qn',
-        refForm.current,
-        'PZwPScpMV104TnYvQ'
-      )
-      .then(
-        () => {
-          alert('Message successfully sent!')
-          window.location.reload();
-        },
-        () => {
-          alert('Failed to send the message')
-        }
-      )
+      emailjs
+        .sendForm(
+          'service_v666rfp4f',
+          'template_loje2qn',
+          refForm.current,
+          'PZwPScpMV104TnYvQ'
+        )
+        .then(
+          () => {
+            alert('Message successfully sent!');
+            window.location.reload();
+          },
+          () => {
+            alert('Failed to send the message');
+          }
+        );
     }
-  }
+  };
 
   return (
     <>
@@ -37,11 +39,18 @@ function Contact() {
           <div className={styles.content}>
             <div className={styles.title}>
               <p>contact</p>
-              <h3>Don`t be shy! Hit me up! 👇</h3>
+              <h3 style={{display: 'flex', gap: '1rem'}}>
+                Don`t be shy! Hit me up!{' '}
+                <motion.h3
+                  initial={{scale: 0}}
+                  whileInView={{scale: 1.2}}
+                  transition={{delay: 0.1, duration: 0.2, type: 'spring'}}
+                >
+                  👇
+                </motion.h3>
+              </h3>
 
               <Terminal ref={refForm} onSubmit={sendEmail} />
-
-              
             </div>
             <div className={styles.icons}>
               <div className={styles['icon-box']}>

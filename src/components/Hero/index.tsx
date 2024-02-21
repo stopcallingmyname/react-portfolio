@@ -1,15 +1,16 @@
-import IconHand from '../../assets/images/hand.png'
+import IconHand from '../../assets/images/hand.png';
 import {
   IconBrandLinkedin,
   IconBrandGithub,
   IconBrandTelegram,
-} from '@tabler/icons-react'
-import styles from './styles.module.scss'
-import { useEffect, useState } from 'react'
-import AnimatedLetters from '../AnimatedLetters'
+} from '@tabler/icons-react';
+import styles from './styles.module.scss';
+import {useEffect, useState} from 'react';
+import AnimatedLetters from '../AnimatedLetters';
+import {motion} from 'framer-motion';
 
 function Hero() {
-  const [letterClass, setLetterClass] = useState<string>('text-animate')
+  const [letterClass, setLetterClass] = useState<string>('text-animate');
 
   const skillsIcons = [
     {
@@ -28,13 +29,13 @@ function Hero() {
       image: 'https://skillicons.dev/icons?i=tailwind,scss',
       id: 4,
     },
-  ]
+  ];
 
   useEffect(() => {
     setTimeout(() => {
-      return setLetterClass('text-animate-hover')
-    }, 4000)
-  }, [])
+      return setLetterClass('text-animate-hover');
+    }, 4000);
+  }, []);
 
   return (
     <>
@@ -47,10 +48,14 @@ function Hero() {
                   str={'Front-End Angular Developer'}
                   LetterClass={letterClass}
                 />
-                <img
-                  className="animate__animated animate__wobble animate__delay-3s"
+                <motion.img
                   src={IconHand}
                   alt="hand-icon"
+                  initial={{scale: 0}}
+                  animate={{
+                    scale: 1,
+                  }}
+                  transition={{delay: 2.7, type: 'spring'}}
                 />
                 <p>
                   Hi, I`m Nikita Khaletsky. A passionate Front-End Angular
@@ -101,7 +106,7 @@ function Hero() {
         </div>
       </section>
     </>
-  )
+  );
 }
 
-export default Hero
+export default Hero;
