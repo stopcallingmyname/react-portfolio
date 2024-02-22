@@ -1,8 +1,8 @@
-import {useState} from 'react';
+import {FC, useState} from 'react';
 import {IconMenu2, IconX} from '@tabler/icons-react';
 import styles from './styles.module.scss';
 
-function Navbar() {
+const Navbar: FC = () => {
   const [hamburger, setHamburger] = useState(false);
 
   const hamburgerMenu = () => {

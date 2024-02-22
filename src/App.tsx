@@ -1,12 +1,9 @@
-import './index.css'
-import Home from './Pages/Home'
+import {FC} from 'react';
+import './index.css';
+import Home from './Pages/Home';
 
-function App() {
-  return (
-    <>
-      <Home />
-    </>
-  )
-}
+const App: FC = () => {
+  return <Home />;
+};
 
-export default App
+export default App;

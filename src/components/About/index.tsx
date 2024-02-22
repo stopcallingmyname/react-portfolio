@@ -1,7 +1,8 @@
+import {FC} from 'react';
 import styles from './styles.module.scss';
 import Spline from '@splinetool/react-spline';
 
-function About() {
+const About: FC = () => {
   return (
     <>
       <section className={styles.about} id="about">
@@ -31,6 +32,6 @@ function About() {
       </section>
     </>
   );
-}
+};
 
 export default About;

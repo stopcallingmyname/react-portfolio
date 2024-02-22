@@ -5,11 +5,11 @@ import {
   IconBrandTelegram,
 } from '@tabler/icons-react';
 import styles from './styles.module.scss';
-import {useEffect, useState} from 'react';
+import {FC, useEffect, useState} from 'react';
 import AnimatedLetters from '../AnimatedLetters';
 import {motion} from 'framer-motion';
 
-function Hero() {
+const Hero: FC = () => {
   const [letterClass, setLetterClass] = useState<string>('text-animate');
 
   const skillsIcons = [
@@ -107,6 +107,6 @@ function Hero() {
       </section>
     </>
   );
-}
+};
 
 export default Hero;

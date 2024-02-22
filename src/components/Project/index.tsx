@@ -8,8 +8,9 @@ import {
   // IconBrandCss3,
 } from '@tabler/icons-react';
 import {motion} from 'framer-motion';
+import {FC} from 'react';
 
-type ProjectProps = {
+type ProjectPropsType = {
   img?: string;
   title?: string;
   gitUrl?: string;
@@ -17,7 +18,13 @@ type ProjectProps = {
   style?: React.CSSProperties | undefined;
 };
 
-function Project({img, title, gitUrl, publicUrl, style}: ProjectProps) {
+const Project: FC<ProjectPropsType> = ({
+  img,
+  title,
+  gitUrl,
+  publicUrl,
+  style,
+}) => {
   return (
     <>
       <motion.section
@@ -78,6 +85,6 @@ function Project({img, title, gitUrl, publicUrl, style}: ProjectProps) {
       </motion.section>
     </>
   );
-}
+};
 
 export default Project;

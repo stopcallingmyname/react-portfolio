@@ -2,10 +2,11 @@ import {
   IconBrandLinkedin,
   IconBrandGithub,
   IconBrandTelegram,
-} from '@tabler/icons-react'
-import styles from './styles.module.scss'
+} from '@tabler/icons-react';
+import styles from './styles.module.scss';
+import {FC} from 'react';
 
-function Footer() {
+const Footer: FC = () => {
   return (
     <>
       <footer>
@@ -44,7 +45,7 @@ function Footer() {
         </div>
       </footer>
     </>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

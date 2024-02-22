@@ -1,17 +1,17 @@
-import React from 'react'
-import './styles.scss'
+import {FC} from 'react';
+import './styles.scss';
 
-interface AnimatedLettersProps {
+type AnimatedLettersPropsType = {
   str: string;
   LetterClass: string;
-}
+};
 
-const AnimatedLetters: React.FC<AnimatedLettersProps> = ({ str, LetterClass }) => {
-  const characters = Array.from(str)
+const AnimatedLetters: FC<AnimatedLettersPropsType> = ({str, LetterClass}) => {
+  const characters = Array.from(str);
 
   return (
     <h1>
-      {characters.map((char: string, i : number) => (
+      {characters.map((char: string, i: number) => (
         <span
           key={char + i}
           className={`${LetterClass} _${i}`}
@@ -23,7 +23,7 @@ const AnimatedLetters: React.FC<AnimatedLettersProps> = ({ str, LetterClass }) =
         </span>
       ))}
     </h1>
-  )
-}
+  );
+};
 
-export default AnimatedLetters
+export default AnimatedLetters;

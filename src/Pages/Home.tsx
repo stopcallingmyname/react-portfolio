@@ -1,12 +1,12 @@
-// import React from 'react'
-import Navbar from '../components/Navbar'
-import Hero from '../components/Hero'
-import About from '../components/About'
-import Projects from '../components/Projects'
-import Contact from '../components/Contact'
-import Footer from '../components/Footer'
+import {FC, lazy} from 'react';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+const About = lazy(() => import('../components/About'));
+const Projects = lazy(() => import('../components/Projects'));
+import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 
-function Home() {
+const Home: FC = () => {
   return (
     <>
       <Navbar />
@@ -16,7 +16,7 @@ function Home() {
       <Contact />
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

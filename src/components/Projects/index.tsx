@@ -1,18 +1,18 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, FC} from 'react';
 import Project from '../Project';
 import styles from './styles.module.scss';
 import {IconPuzzleFilled} from '@tabler/icons-react';
 
-type GridAreaStyle = {
+type GridAreaStyleType = {
   gridArea?: string;
 };
 
-function Projects() {
-  const [gridAreaStyle, setGridAreaStyle] = useState<GridAreaStyle>({});
+const Projects: FC = () => {
+  const [gridAreaStyle, setGridAreaStyle] = useState<GridAreaStyleType>({});
 
   useEffect(() => {
     const updateGridAreaStyle = () => {
-      const newStyle: GridAreaStyle =
+      const newStyle: GridAreaStyleType =
         window.innerWidth > 630 ? {gridArea: '1 / 1 / 3 / 2'} : {};
       setGridAreaStyle((prevStyle) => {
         if (prevStyle.gridArea === newStyle.gridArea) {
@@ -84,6 +84,6 @@ function Projects() {
       </section>
     </>
   );
-}
+};
 
 export default Projects;

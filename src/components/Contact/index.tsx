@@ -1,4 +1,4 @@
-import React from 'react';
+import {FC} from 'react';
 import {IconMapSearch, IconMail} from '@tabler/icons-react';
 import styles from './styles.module.scss';
 import {useRef} from 'react';
@@ -6,7 +6,7 @@ import emailjs from '@emailjs/browser';
 import Terminal from '../Terminal';
 import {motion} from 'framer-motion';
 
-function Contact() {
+const Contact: FC = () => {
   const refForm = useRef<HTMLFormElement>(null);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
@@ -80,6 +80,6 @@ function Contact() {
       </section>
     </>
   );
-}
+};
 
 export default Contact;
