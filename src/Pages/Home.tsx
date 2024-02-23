@@ -5,17 +5,16 @@ const About = lazy(() => import('../components/About'));
 const Projects = lazy(() => import('../components/Projects'));
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
-import {Spinner} from '@nextui-org/spinner';
 
 const Home: FC = () => {
   return (
     <>
       <Navbar />
       <Hero />
-      <Suspense fallback={<Spinner color="primary" />}>
+      <Suspense fallback={<h3 style={{textAlign: 'center'}}>Loading..</h3>}>
         <About />
       </Suspense>
-      <Suspense fallback={<Spinner color="primary" />}>
+      <Suspense fallback={<h3 style={{textAlign: 'center'}}>Loading..</h3>}>
         <Projects />
       </Suspense>
       <Contact />
