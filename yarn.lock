@@ -177,7 +177,7 @@
   dependencies:
     clsx "^1.2.1"
 
-"@nextui-org/theme@>=2.1.0":
+"@nextui-org/theme@^2.1.17", "@nextui-org/theme@>=2.1.0":
   version "2.1.17"
   resolved "https://registry.npmjs.org/@nextui-org/theme/-/theme-2.1.17.tgz"
   integrity sha512-/WeHcMrAcWPGsEVn9M9TnvxKkaYkCocBH9JrDYCEFQoJgleUzHd4nVk7MWtpSOYJXLUzUMY1M9AqAK3jBkw+5g==
