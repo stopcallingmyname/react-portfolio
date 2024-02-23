@@ -4,7 +4,7 @@ import styles from './styles.module.scss';
 import {useRef} from 'react';
 import emailjs from '@emailjs/browser';
 import Terminal from '../Terminal';
-import {motion} from 'framer-motion';
+import {Toaster, toast} from 'sonner';
 
 const Contact: FC = () => {
   const refForm = useRef<HTMLFormElement>(null);
@@ -22,8 +22,14 @@ const Contact: FC = () => {
         )
         .then(
           () => {
-            alert('Message successfully sent!');
-            window.location.reload();
+            // toast.success('Message successfully sent!');
+            // alert('Message successfully sent!');
+            // window.location.reload();
+
+            toast.success('Message successfully sent!');
+            // setTimeout(() => {
+            //   window.location.reload();
+            // }, 2000);
           },
           () => {
             alert('Failed to send the message');
@@ -35,19 +41,13 @@ const Contact: FC = () => {
   return (
     <>
       <section className={styles.contact} id="contact">
+        <Toaster richColors position="top-right" />
         <div className={styles.container}>
           <div className={styles.content}>
             <div className={styles.title}>
               <p>contact</p>
               <h3 style={{display: 'flex', gap: '1rem'}}>
-                Don`t be shy! Hit me up!{' '}
-                <motion.h3
-                  initial={{scale: 0}}
-                  whileInView={{scale: 1.2}}
-                  transition={{delay: 0.1, duration: 0.2, type: 'spring'}}
-                >
-                  👇
-                </motion.h3>
+                Don`t be shy! Hit me up! 👇
               </h3>
 
               <Terminal ref={refForm} onSubmit={sendEmail} />

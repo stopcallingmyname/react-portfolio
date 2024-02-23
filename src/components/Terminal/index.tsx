@@ -21,6 +21,10 @@ const Terminal = forwardRef<HTMLFormElement, ITerminalProps>(
       message: false,
     });
 
+    const [nameValue, setNameValue] = useState('');
+
+    const [requestSubmitted, setRequestSubmitted] = useState(false);
+
     const arrayOfRefs = useRef([
       createRef<HTMLInputElement>(),
       createRef<HTMLInputElement>(),
@@ -50,6 +54,7 @@ const Terminal = forwardRef<HTMLFormElement, ITerminalProps>(
           }
           if (field === 'message') {
             setFieldsState((prev) => ({...prev, message: false}));
+            setRequestSubmitted(true);
             (ref as any)?.current.requestSubmit();
           }
         }
@@ -58,10 +63,17 @@ const Terminal = forwardRef<HTMLFormElement, ITerminalProps>(
       }
     };
 
+    useEffect(() => {
+      if (requestSubmitted) {
+        setNameValue('');
+        setFieldsState((prev) => ({...prev, name: true}));
+        setRequestSubmitted(false);
+      }
+    }, [requestSubmitted]);
+
     return (
       <>
         <div className={styles.terminal}>
-          {/* Terminal UI code remains unchanged */}
           <div className={styles['terminal-header']}>
             <div className={styles['terminal-header-op']}>
               <span
@@ -80,7 +92,7 @@ const Terminal = forwardRef<HTMLFormElement, ITerminalProps>(
             <div className={styles['terminal-header-empty']}></div>
           </div>
           <div className={styles['terminal-body']}>
-            <form ref={ref} onSubmit={onSubmit}>
+            <form ref={ref} noValidate onSubmit={onSubmit}>
               <span className={styles['terminal-body-row']}>
                 {fieldsState.name && (
                   <span className={styles['terminal-body-row--arrow']}></span>
@@ -91,6 +103,8 @@ const Terminal = forwardRef<HTMLFormElement, ITerminalProps>(
                 </span>
 
                 <input
+                  value={nameValue}
+                  onChange={(e) => setNameValue(e.target.value)}
                   disabled={!fieldsState.name}
                   onKeyDown={handleKeyPress('name')}
                   className={styles['terminal-body-row--input']}

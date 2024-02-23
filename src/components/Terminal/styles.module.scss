@@ -1,7 +1,7 @@
-@use "../../../src/global/boilerplate.scss" as *;
+@use '../../../src/global/boilerplate.scss' as *;
 
 .terminal {
-  font-family: "Source Code Pro", monospace;
+  font-family: 'Source Code Pro', monospace;
   color: $background-color;
   background-color: #1b1b1b;
   border-radius: 5px;
@@ -79,7 +79,7 @@
 
   &-title {
     color: $black-shade;
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 1.2rem;
 
     @media (max-width: 310px) {
@@ -155,13 +155,12 @@
       caret-color: #ffd700;
       color: #ffd700;
       width: 100%;
-      font-size: 1.3rem;
     }
 
-    input[type="search"]::-webkit-search-decoration,
-    input[type="search"]::-webkit-search-cancel-button,
-    input[type="search"]::-webkit-search-results-button,
-    input[type="search"]::-webkit-search-results-decoration {
+    input[type='search']::-webkit-search-decoration,
+    input[type='search']::-webkit-search-cancel-button,
+    input[type='search']::-webkit-search-results-button,
+    input[type='search']::-webkit-search-results-decoration {
       -webkit-appearance: none;
     }
 

@@ -1,4 +1,4 @@
-@use "../../../src/global/boilerplate.scss" as *;
+@use '../../../src/global/boilerplate.scss' as *;
 
 .contact {
   background-color: white;
@@ -29,6 +29,7 @@
     h3 {
       color: $black-shade;
       font-size: $headings-size;
+      text-wrap: balance;
     }
   }
 

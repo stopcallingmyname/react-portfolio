@@ -12,6 +12,7 @@
   "dependencies": {
     "@dhaiwat10/react-link-preview": "^1.15.0",
     "@emailjs/browser": "^4.1.0",
+    "@nextui-org/spinner": "^2.0.24",
     "@splinetool/react-spline": "^2.2.6",
     "@splinetool/runtime": "^1.0.51",
     "@tabler/icons-react": "^2.47.0",
@@ -20,7 +21,8 @@
     "html-metadata-parser": "^2.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.70.0"
+    "sass": "^1.70.0",
+    "sonner": "^1.4.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

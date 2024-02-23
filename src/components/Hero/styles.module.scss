@@ -1,4 +1,4 @@
-@use "../../../src/global/boilerplate.scss" as *;
+@use '../../../src/global/boilerplate.scss' as *;
 
 .hero {
   display: flex;
@@ -152,6 +152,7 @@
     color: #555555;
     font-family: $text-font;
     line-height: 1.6;
+    text-wrap: pretty;
 
     @media (max-width: 900px) {
       margin-bottom: 5rem;
@@ -228,7 +229,7 @@
 }
 
 .hero-img {
-  background-image: url("../../assets/images/photo_2023.webp");
+  background-image: url('../../assets/images/photo_2023.webp');
   width: 35rem;
   height: 35rem;
   background-size: cover;
