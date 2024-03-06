@@ -22,14 +22,7 @@ const Contact: FC = () => {
         )
         .then(
           () => {
-            // toast.success('Message successfully sent!');
-            // alert('Message successfully sent!');
-            // window.location.reload();
-
             toast.success('Message successfully sent!');
-            // setTimeout(() => {
-            //   window.location.reload();
-            // }, 2000);
           },
           () => {
             alert('Failed to send the message');
@@ -41,7 +34,7 @@ const Contact: FC = () => {
   return (
     <>
       <section className={styles.contact} id="contact">
-        <Toaster richColors position="top-right" />
+        <Toaster position="top-right" />
         <div className={styles.container}>
           <div className={styles.content}>
             <div className={styles.title}>
